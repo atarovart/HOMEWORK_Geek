@@ -1,22 +1,38 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
-//task_3
-void PrintArray(int arr[], int size)
+void arrayprint(int arr[], size_t size)
 {
-	for (size_t a = 1; a <=22; a += 3)
+	for (size_t i = 0; i < size; i++)
 	{
-		cout << arr[a] << " " ;
+		cout << arr[i] << " ";
 	}
+}
+
+bool printarray(int arr[], size_t size)
+{
+	int num = 1;
+	const int STEP = 3;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		arr[i] = num;
+		num += STEP;
+
+	}
+	return true;
 }
 
 int main()
 {
 	const int mysize = 8;
-	int myarr[1] = { 1 };
-	for (myarr[1])
+	int myarr[mysize];
+	if (printarray(myarr, mysize))
+	{
+		arrayprint(myarr, mysize);
+	}
 
-	PrintArray(myarr, mysize);
+	cout << endl;
 	return 0;
 }
